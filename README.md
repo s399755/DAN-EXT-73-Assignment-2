@@ -11,8 +11,3 @@ DAN-EXT-73-Assignment 2 - Software Now HIT137
 then decrypts it to verify the original message is correctly restored."""
 # Feedback noted from assignment 1, less comments (comments only kept relevant).
 
-# Read original text file
-with open("raw_text.txt", "r") as file:
-    original_text = file.read()
-    
-print(original_text)
