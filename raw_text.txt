@@ -1,0 +1,4 @@
+Dear Assignment Marker,
+If you can read this after decryption, then luckily the program works.
+If not, something has gone terribly wrong, sorry.
+Either way, thank you for marking assignment 2.
