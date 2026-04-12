@@ -8,7 +8,12 @@ DAN/EXT 73
 Patrick Burzynski - 399755  
 
 ## Question 1
-This program reads text from a file, encrypts it using a simple Caesar shift, and then decrypts it to verify the original message is correctly restored.
+This program is being developed to read text from a file, encrypt it using a custom shift method, and then decrypt it to verify the original message.
+
+Current progress:
+- Implemented encryption function
+- Implemented decryption function
+- Core logic for reversible transformation completed
 
 ## Notes
 Feedback from Assignment 1 has been applied by keeping comments minimal and only where relevant.
