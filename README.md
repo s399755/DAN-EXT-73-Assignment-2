@@ -4,7 +4,7 @@ Software Now HIT137
 ## Group Name
 DAN/EXT 73  
 
-## Group Members
+## Group Member
 Patrick Burzynski - 399755  
 
 ## Question 1
@@ -22,4 +22,10 @@ Ready for submission.
 Feedback from Assignment 1 has been applied by keeping comments minimal and only where relevant.
 This folder contains the program for Question 1 along with sample input and output files.
 The encrypted and decrypted files demonstrate that the program works correctly.
+
+## Question 2
+This program reads mathematical expressions from a text file, evaluates them using recursive descent parsing, and writes the results to an output file.
+
+Update 1
+Initial setup of program structure. File reading implemented to load expressions from input file.
 
