@@ -20,4 +20,6 @@ Ready for submission.
 
 ## Notes
 Feedback from Assignment 1 has been applied by keeping comments minimal and only where relevant.
+This folder contains the program for Question 1 along with sample input and output files.
+The encrypted and decrypted files demonstrate that the program works correctly.
 
