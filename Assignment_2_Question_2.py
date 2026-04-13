@@ -12,8 +12,7 @@ def tokenize(expr):
     tokens = []
     i = 0
     while i < len(expr):
-        char = expr[i]
-        
+        char = expr[i]    
         # build multi-digit numbers
         if char.isdigit():
             num = ""
@@ -21,12 +20,10 @@ def tokenize(expr):
                 num += expr[i]
                 i += 1
             tokens.append(("NUM", num))
-            continue
-        
+            continue 
         #operators
         elif char in "+-*/":
-            tokens.append(("OP", char))
-            
+            tokens.append(("OP", char))     
         #brackets
         elif char == "(":
             tokens.append(("LPAREN", "("))     
@@ -35,6 +32,18 @@ def tokenize(expr):
         i += 1
     tokens.append(("END", ""))
     return tokens
+
+#PARSER
+class Parser:
+    def __init__(self, tokens):
+        self.tokens = tokens
+        self.pos = 0      
+    # return current token
+    def current(self):
+        return self.tokens[self.pos]    
+    # move to next token
+    def eat(self):
+        self.pos += 1
 
 def evaluate_file(input_path):
     with open(input_path, "r") as file:
