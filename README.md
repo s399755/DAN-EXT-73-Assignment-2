@@ -30,3 +30,4 @@ Update 2 - Implemented tokenizer to convert input expressions into structured to
 
 Update 3 - Added parser class structure with initial expression method for handling basic operations.
 
+Update 4 - Completed expression and term parsing to support addition, subtraction, multiplication and division.
