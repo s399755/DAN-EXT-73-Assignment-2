@@ -28,5 +28,5 @@ Update 1 - Initial setup of program structure. File reading implemented to load 
 
 Update 2 - Implemented tokenizer to convert input expressions into structured tokens for parsing.
 
-Update 3 - Added parser class with initial expression handling for addition and subtraction operations.
+Update 3 - Added parser class structure with initial expression method for handling basic operations.
 
