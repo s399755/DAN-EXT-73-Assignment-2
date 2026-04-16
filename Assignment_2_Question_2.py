@@ -33,7 +33,7 @@ def tokenize(expr):
     tokens.append(("END", ""))
     return tokens
 
-#PARSER
+#Parser
 class Parser:
     def __init__(self, tokens):
         self.tokens = tokens
@@ -58,7 +58,7 @@ class Parser:
                 value -= rhs
             tree = f"({op} {tree} {rhs_tree})"
         return value, tree
-    
+
     # handles * and /
     def term(self):
         value, tree = self.factor()
@@ -74,6 +74,29 @@ class Parser:
                 value *= rhs
             tree = f"({op} {tree} {rhs_tree})"
         return value, tree
+
+    #handles numbers, brackets and unary minus
+    def factor(self):
+        token_type, token_value = self.current()
+        
+        # unary minus
+        if token_type == "OP" and token_value == "-":
+            self.eat()
+            value, tree = self.factor()
+            return -value, f"(neg {tree})"
+        
+        # brackets
+        if token_type == "LPAREN":
+            self.eat()
+            value, tree = self.expression()
+            self.eat()
+            return value, f"({tree})"
+        
+        # number
+        if token_type == "NUM":
+            self.eat()
+            return float(token_value), token_value
+        return None, "ERROR"
 
 def evaluate_file(input_path):
     with open(input_path, "r") as file:
