@@ -45,6 +45,36 @@ class Parser:
     def eat(self):
         self.pos += 1
 
+    # handles + and -
+    def expression(self):
+        value, tree = self.term()
+        while self.current()[1] in ["+", "-"]:
+            op = self.current()[1]
+            self.eat()
+            rhs, rhs_tree = self.term()
+            if op == "+":
+                value += rhs
+            else:
+                value -= rhs
+            tree = f"({op} {tree} {rhs_tree})"
+        return value, tree
+    
+    # handles * and /
+    def term(self):
+        value, tree = self.factor()
+        while self.current()[1] in ["*", "/"]:
+            op = self.current()[1]
+            self.eat()
+            rhs, rhs_tree = self.factor()
+            if op == "/":
+                if rhs == 0:
+                    return None, "ERROR"
+                value /= rhs
+            else:
+                value *= rhs
+            tree = f"({op} {tree} {rhs_tree})"
+        return value, tree
+
 def evaluate_file(input_path):
     with open(input_path, "r") as file:
         lines = file.readlines()
