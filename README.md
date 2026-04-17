@@ -33,3 +33,8 @@ Update 3 - Added parser class structure with initial expression method for handl
 Update 4 - Completed expression and term parsing to support addition, subtraction, multiplication and division.
 
 Update 5 - Added factor handling to support numbers, brackets and unary minus operations.
+
+Update 6 - Added output formatting and file writing. Finalised program with output formatting and file writing to match required sample output.
+
+## Notes
+This folder contains the program for Question 2 along with the sample input. The output file demonstrates that the program correctly evaluates expressions and matches the required format.
